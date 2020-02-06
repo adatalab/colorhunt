@@ -1,5 +1,6 @@
 library(rvest)
 library(ggplot2)
+library(crayon)
 
 # You can get the url from https://dribbble.com/
 
@@ -39,7 +40,8 @@ color_hunt_show <- function(url) {
   }
 }
 
-color_hunt_show("https://dribbble.com/shots/6393225-Iris")
+color_hunt_show("https://dribbble.com/shots/8427177-just-chillin")
+color_hunt("https://dribbble.com/shots/9912399-Loading-Icon-Payment-App") %>% pals::pal.bands() # OR using pals::pal.bands()
 
 ## scale_*_hunt ----
 scale_color_hunt <- function(url) {
