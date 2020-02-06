@@ -4,7 +4,7 @@ library(ggplot2)
 # You can get the url from https://dribbble.com/
 
 ## colorhunt function ----
-colorhunt <- function(url) {
+color_hunt <- function(url) {
 
   colors <- url %>%
     read_html() %>%
@@ -16,7 +16,7 @@ colorhunt <- function(url) {
 }
 
 ## usage ----
-colors <- colorhunt("https://dribbble.com/shots/6393225-Iris")
+colors <- color_hunt("https://dribbble.com/shots/6393225-Iris")
 
 iris %>%
   ggplot(aes(Sepal.Length, Sepal.Width, color = Species)) +
@@ -29,7 +29,7 @@ iris %>%
 ## color_hunt_show function ----
 color_hunt_show <- function(url) {
 
-  x <- colourhunt(url)
+  x <- color_hunt(url)
   font <- make_style("black")
   bg <- lapply(x, FUN = function(x) make_style(x, bg = TRUE))
 
@@ -42,8 +42,8 @@ color_hunt_show <- function(url) {
 color_hunt_show("https://dribbble.com/shots/6393225-Iris")
 
 ## scale_*_hunt ----
-scale_color_hunt <- function(url, select = 1:3) {
-  colors <- scale_color_manual(values = colorhunt(url))
+scale_color_hunt <- function(url) {
+  colors <- scale_color_manual(values = color_hunt(url))
   colors
 }
 

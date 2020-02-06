@@ -1,12 +1,12 @@
 library(tidyverse)
 library(crayon)
 
-load("data/color_lego.rda")
+load("data/lego.rda")
 load("data/list_lego.rda")
 
-## colorlego function ----
-colorlego <- function(series) {
-  color_lego %>%
+## color_lego function ----
+color_lego <- function(series) {
+  lego %>%
     filter(color != "#FFFFFF") %>%
     filter(color != "#FCFCFC") %>%
     filter(name == series) %>%
@@ -14,7 +14,7 @@ colorlego <- function(series) {
     unique()
 }
 
-colorlego("Basic")
+color_lego("Basic")
 
 ## usage ----
 iris %>%
@@ -22,12 +22,12 @@ iris %>%
   summarise(Sepal.Length = mean(Sepal.Length)) %>%
   ggplot(aes(Species, Sepal.Length, fill = Species)) +
   geom_col() +
-  scale_fill_manual(values = colorlego("Ferrari")[1:3])
+  scale_fill_manual(values = color_lego("Ferrari")[1:3])
 
 ## color_lego_show() function ----
 color_lego_show <- function(series) {
 
-  x <- colorlego(series)
+  x <- color_lego(series)
   font <- make_style("ivory")
   bg <- lapply(x, FUN = function(x) make_style(x, bg = TRUE))
 
