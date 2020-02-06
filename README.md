@@ -1,3 +1,3 @@
 # colorhunt
 
-The package scraping the color code from http://colorhunt.co, then generate the palette for 'ggplot2'.
+The package scraping the color code from https://dribbble.com/, then generate the palette for 'ggplot2'.
