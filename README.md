@@ -8,7 +8,7 @@ remotes::install_github("adatalab/colorhunt")
 
 ## Usage
 ### First Step
-Find the colors **INSIGHT** for your plot at https://dribbble.com/. For example, I found the `iris` images at https://dribbble.com/shots/6393225-Iris
+Find the **COLOR INSIGHT** for your plot at https://dribbble.com/. For example, I found the `iris` images at https://dribbble.com/shots/6393225-Iris
 
 ![](dribbble.png)
 
