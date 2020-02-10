@@ -16,7 +16,7 @@
 #'   scale_fill_manual(values = color_lego("Ferrari"))
 
 color_lego <- function(series) {
-  color <- lego %>%
+  color <- colorhunt::lego %>%
     filter(color != "#FFFFFF") %>%
     filter(color != "#FCFCFC") %>%
     filter(name == series) %>%

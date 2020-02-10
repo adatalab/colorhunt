@@ -5,6 +5,7 @@
 #' @keywords color, ggplot2, dribbble
 #' @import rvest
 #' @import dplyr
+#' @import xml2
 #' @import magrittr
 #' @export
 #' @examples
