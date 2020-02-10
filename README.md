@@ -1,14 +1,14 @@
 # colorhunt
 The package scraping the color code from https://dribbble.com/, then generate the palette for 'ggplot2'.
 
-## Installration
+## Installation
 ```
 remotes::install_github("adatalab/colorhunt")
 ```
 
 ## Usage
 ### First Step
-Find the colors for your ggplot2 plot at https://dribbble.com/. For example, I found the `iris` images at https://dribbble.com/shots/6393225-Iris
+Find the colors **INSIGHT** for your plot at https://dribbble.com/. For example, I found the `iris` images at https://dribbble.com/shots/6393225-Iris
 
 ![](dribbble.png)
 
@@ -32,6 +32,7 @@ This function make palette from the color dataset from 379 LEGO series. `list_le
 
 ```
 colors <- color_lego("Ferrari")
+
 mpg %>%
 group_by(class) %>%
   summarise(displ = mean(displ)) %>%
