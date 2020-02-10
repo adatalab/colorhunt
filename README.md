@@ -27,7 +27,8 @@ iris %>%
 ```
 ![](iris.png)
 
-### color_lego()
+### color_lego()  
+![](bricks.jpeg)  
 This function make palette from the color dataset from 379 LEGO series. `list_lego` shows the list of LEGO series.
 
 ```
@@ -42,3 +43,7 @@ group_by(class) %>%
 ```
 
 ![](lego.png)
+
+## Getting helps
+- For help or issues using colorhunt, please submit a GitHub issue.  
+- For personal communication, please contact Youngjun Na (ruminoreticulum@gmail.com).
