@@ -1,6 +1,6 @@
 # colorhunt
 ![](header.jpeg)
-The package hunt (scraping) the color code from https://dribbble.com/, then generate the color palette.
+The package hunt (crawling) the color code from https://dribbble.com/, then generate the color palette.
 
 ## Installation
 ```
@@ -17,6 +17,9 @@ Find the **COLOR INSIGHT** for your plot at https://dribbble.com/. For example, 
 ### color_hunt()
 Import the colors from dribbble!
 ```
+library(colorhunt)
+library(ggplot2)
+
 colors <- color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 
 iris %>%
