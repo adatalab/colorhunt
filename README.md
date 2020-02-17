@@ -19,6 +19,7 @@ Import the colors from dribbble!
 ```
 library(colorhunt)
 library(ggplot2)
+library(magrittr)
 
 colors <- color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 
