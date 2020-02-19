@@ -9,6 +9,8 @@
 #' @import magrittr
 #' @export
 #' @examples
+#' library(ggplot2)
+#' library(dplyr)
 #' colors <- color_hunt("https://dribbble.com/shots/6393225-Iris")
 #' iris %>%
 #' ggplot(aes(Sepal.Length, Sepal.Width, color = Species)) +

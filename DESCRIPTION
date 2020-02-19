@@ -1,7 +1,8 @@
 Package: colorhunt
 Type: Package
-Title: A package for hunting the color instight.
+Title: A package for hunting the color instight
 Version: 0.1.0
+Dependency: R (>= 2.10)
 Authors@R: person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"))
 Description: The package scraping the color code from colorhunt.co, then generate 
     the palette for 'ggplot2'.
