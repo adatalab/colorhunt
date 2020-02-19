@@ -1,6 +1,6 @@
 Package: colorhunt
 Type: Package
-Title: A Color Palettes Extension for 'ggplot2'
+Title: A package for hunting the color instight.
 Version: 0.1.0
 Authors@R: person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"))
 Description: The package scraping the color code from colorhunt.co, then generate 
@@ -12,9 +12,9 @@ Imports:
     dplyr,
     rvest,
     crayon,
-    crayon,
     magrittr,
     xml2
 Suggests: 
-    ggplot2
+    ggplot2,
+    testthat
 RoxygenNote: 6.1.1
