@@ -2,14 +2,13 @@
 
 language: R
 sudo: false
-dist: trusty
 cache: packages
-latex: false
-fortran: false
 
-jobs:
+matrix:
   include:
   - r: release
+    after_success:
+    - Rscript -e 'covr::codecov()'
     before_cache:
     - Rscript -e 'remotes::install_cran("pkgdown")'
     - Rscript -e 'remotes::install_github("adatalab/colorhunt")'
@@ -17,11 +16,3 @@ jobs:
       provider: script
       script: Rscript -e 'pkgdown::deploy_site_github(verbose = TRUE)'
       skip_cleanup: true
-
-env:
-  global:
-  - _R_CHECK_FORCE_SUGGESTS_=false
-  - MAKEFLAGS="-j 2"
-  - TRAVIS_CXXFLAGS="-Wall -Wextra -pedantic -Werror"
-  - R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
-  - _R_CHECK_SYSTEM_CLOCK_=FALSE
