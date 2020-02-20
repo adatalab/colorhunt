@@ -23,7 +23,7 @@ library(dplyr)
 
 colors <- color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 
-pals::pal.bands(color)
+pals::pal.bands(colors)
 ```
 
 ![](pals.png)
