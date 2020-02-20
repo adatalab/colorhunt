@@ -7,6 +7,7 @@
 #' @import dplyr
 #' @import xml2
 #' @import magrittr
+#' @import stringr
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -21,6 +22,10 @@
 #' )
 
 color_hunt <- function(url) {
+
+  if(!stringr::str_detect(url, "dribbble.com")) {
+    stop("Please insert the URL from https://dribbble.com/shots/")
+  }
 
   colors <- url %>%
     read_html() %>%

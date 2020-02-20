@@ -23,6 +23,12 @@ library(dplyr)
 
 colors <- color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 
+pals::pal.bands(color)
+```
+
+![](pals.png)
+
+```
 iris %>%
   ggplot(aes(Sepal.Length, Sepal.Width, color = Species)) +
   geom_point(size = 2) +
@@ -41,6 +47,12 @@ This function make palette from the color dataset from 379 LEGO series. `list_le
 ```
 colors <- color_lego("Ferrari")
 
+pals::pal.bands(colors)
+```
+
+![](pals2.png)
+
+```
 mpg %>%
 group_by(class) %>%
   summarise(displ = mean(displ)) %>%

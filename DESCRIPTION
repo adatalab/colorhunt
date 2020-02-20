@@ -14,7 +14,8 @@ Imports:
     rvest,
     crayon,
     magrittr,
-    xml2
+    xml2,
+    stringr
 Suggests: 
     ggplot2,
     testthat
