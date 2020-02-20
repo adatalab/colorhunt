@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+.travis.yml
 R-underdev
 bricks.jpeg
 dribbble.png
