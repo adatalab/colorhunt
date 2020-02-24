@@ -8,6 +8,7 @@
 #' @import xml2
 #' @import magrittr
 #' @import stringr
+#' @import clipr
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -37,7 +38,8 @@ color_hunt <- function(url) {
     stringr::str_replace_all("#", "'#") %>%
     stringr::str_replace_all(",", "',")
 
-  cat(c)
+  clipr::write_clip(c, object_type = "character")
+  message("Paste (Ctrl + V) the color code into your script!")
   return(colors)
 
 }

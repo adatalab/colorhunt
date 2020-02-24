@@ -15,7 +15,8 @@ Imports:
     crayon,
     magrittr,
     xml2,
-    stringr
+    stringr,
+    clipr
 Suggests: 
     ggplot2,
     testthat
