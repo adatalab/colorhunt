@@ -1,6 +1,6 @@
 # colorhunt
 ![](header.jpeg)
-The package hunt (crawling) the color code from https://dribbble.com/, then generate the color palette.
+The package hunt (crawling) the color HEX codes from https://dribbble.com/, then generate the color palette.
 
 ## Installation
 ```
