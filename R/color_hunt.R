@@ -33,5 +33,11 @@ color_hunt <- function(url) {
     html_children() %>%
     html_text()
 
+  c <- paste0("c(", toString(colors), "')") %>%
+    stringr::str_replace_all("#", "'#") %>%
+    stringr::str_replace_all(",", "',")
+
+  cat(c)
   return(colors)
+
 }
