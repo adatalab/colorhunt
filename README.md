@@ -26,6 +26,7 @@ library(dplyr)
 colors <- color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 
 # Great! Just push the `Ctrl + V` button!
+color_hunt(url = "https://dribbble.com/shots/6393225-Iris")
 colors <- c('#FFFAEB', '#538F6D', '#BA680D', '#E99E29', '#FDE75C', '#2F545F', '#CBC4C3', '#6D8A96')
 
 pals::pal.bands(colors)
