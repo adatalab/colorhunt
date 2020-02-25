@@ -5,6 +5,8 @@
 #' @keywords color, ggplot2, lego
 #' @import rvest
 #' @import magrittr
+#' @import stringr
+#' @import clipr
 #' @export
 #' @examples
 #' colors <- color_lego("Ferrari")
@@ -22,6 +24,13 @@ color_lego <- function(series) {
     filter(name == series) %>%
     pull(color) %>%
     unique()
+
+  c <- paste0("c(", toString(colors), "')") %>%
+    stringr::str_replace_all("#", "'#") %>%
+    stringr::str_replace_all(",", "',")
+
+  clipr::write_clip(c, object_type = "character")
+  cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
 
   return(color)
 }

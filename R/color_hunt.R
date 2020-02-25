@@ -39,7 +39,7 @@ color_hunt <- function(url) {
     stringr::str_replace_all(",", "',")
 
   clipr::write_clip(c, object_type = "character")
-  message("Paste (Ctrl + V) the color code into your script!")
+  cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
   return(colors)
 
 }

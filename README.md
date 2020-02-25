@@ -15,7 +15,8 @@ Find the **COLOR INSIGHT** for your plot at https://dribbble.com/. For example, 
 ![](dribbble.png)
 
 ### color_hunt()
-Import the colors from dribbble!
+Import the colors from dribbble using `color_hunt()`! For reproducibility, color codes are going to copy to your clipboard. Paste (Ctrl + V) the color code into your script. There is no need to crawling every time.
+
 ```
 library(colorhunt)
 library(ggplot2)
