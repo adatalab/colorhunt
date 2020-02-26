@@ -1,6 +1,9 @@
+
+
 # colorhunt
-![](header.jpeg)
-The package hunt (crawling) the color HEX codes from https://dribbble.com/, then generate the color palette.
+Get inspired with the **COLOR INSIGHT** shared by talented designers. The package hunt (crawling) the color HEX codes from https://dribbble.com/, then generate the color palette.
+
+![](fig/header.png)
 
 ## Installation
 ```
@@ -12,7 +15,7 @@ remotes::install_github("adatalab/colorhunt")
 ### First step
 Find the **COLOR INSIGHT** for your plot at https://dribbble.com/. For example, I found the `iris` images at https://dribbble.com/shots/6393225-Iris.
 
-![](dribbble.png)
+![](fig/dribbble.png)
 
 ### color_hunt()
 Import the colors from dribbble using `color_hunt()`! For reproducibility, color codes are going to copy to your clipboard. Paste (Ctrl + V) the color code into your script. There is no need to crawling every time.
@@ -32,7 +35,7 @@ colors <- c('#FFFAEB', '#538F6D', '#BA680D', '#E99E29', '#FDE75C', '#2F545F', '#
 pals::pal.bands(colors)
 ```
 
-![](pals.png)
+![](fig/pals.png)
 
 ```
 iris %>%
@@ -43,9 +46,9 @@ iris %>%
     panel.background = element_rect(fill = colors[1])
   )
 ```
-![](iris.png)
+![](fig/iris.png)
 
-![](bricks.jpeg)  
+![](fig/bricks.jpeg)  
 
 ### color_lego()  
 This function make palette from the color dataset from 379 LEGO series. `list_lego` shows the list of LEGO series.
@@ -56,7 +59,7 @@ colors <- color_lego("Ferrari")
 pals::pal.bands(colors)
 ```
 
-![](pals2.png)
+![](fig/pals2.png)
 
 ```
 mpg %>%
@@ -67,15 +70,15 @@ group_by(class) %>%
   scale_fill_manual(values = color_lego("Ferrari"))
 ```
 
-![](lego.png)
+![](fig/lego.png)
 
 ### color_lego_show()  
-Before the choice of the LEGO series. You can check the colors of the LEGO color dataset at the command line.
+Before the choice of the LEGO series. You can check the colors of the LEGO series at the command line.
 
 ```
 color_lego_show("Star Wars")
 ```
-![](lego_show.png)
+![](fig/lego_show.png)
 
 ## Getting helps
 - For help or issues using colorhunt, please submit a GitHub [Issue](https://github.com/adatalab/colorhunt/issues).  
