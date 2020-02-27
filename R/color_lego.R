@@ -25,7 +25,7 @@ color_lego <- function(series) {
     pull(color) %>%
     unique()
 
-  c <- paste0("c(", toString(colors), "')") %>%
+  c <- paste0("c(", toString(color), "')") %>%
     stringr::str_replace_all("#", "'#") %>%
     stringr::str_replace_all(",", "',")
 
