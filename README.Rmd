@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # colorhunt
 
 <!-- badges: start -->
+[![R build status](https://github.com/adatalab/colorhunt/workflows/R-CMD-check/badge.svg)](https://github.com/adatalab/colorhunt/actions)
 <!-- badges: end -->
 
 The goal of colorhunt is to ...

@@ -13,3 +13,4 @@ pals.png
 pals2.png
 ^\.travis\.yml$
 ^README\.Rmd$
+^\.github$
