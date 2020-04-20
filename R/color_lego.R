@@ -18,7 +18,8 @@
 #'   scale_fill_manual(values = color_lego("Ferrari"))
 
 color_lego <- function(series) {
-  color <- colorhunt::lego %>%
+
+  colors <- colorhunt::lego %>%
     filter(color != "#FFFFFF") %>%
     filter(color != "#FCFCFC") %>%
     filter(name == series) %>%
@@ -35,7 +36,7 @@ color_lego <- function(series) {
     clipr::write_clip(c, object_type = "character")
     cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
 
-    return(color)
+    return(colors)
   }
 
 }
