@@ -29,7 +29,7 @@ color_lego <- function(series) {
   if(Sys.info()[1] == "Linux") {
     return(colors)
   } else {
-    c <- paste0("c(", toString(color), "')") %>%
+    c <- paste0("c(", toString(colors), "')") %>%
       stringr::str_replace_all("#", "'#") %>%
       stringr::str_replace_all(",", "',")
 
