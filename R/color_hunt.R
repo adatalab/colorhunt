@@ -34,12 +34,15 @@ color_hunt <- function(url) {
     html_children() %>%
     html_text()
 
-  c <- paste0("c(", toString(colors), "')") %>%
-    stringr::str_replace_all("#", "'#") %>%
-    stringr::str_replace_all(",", "',")
+  if(Sys.info()[1] == "Linux") {
+    return(colors)
+  } else {
+    c <- paste0("c(", toString(colors), "')") %>%
+      stringr::str_replace_all("#", "'#") %>%
+      stringr::str_replace_all(",", "',")
 
-  clipr::write_clip(c, object_type = "character")
-  cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
-  return(colors)
-
+    clipr::write_clip(c, object_type = "character")
+    cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
+    return(colors)
+  }
 }

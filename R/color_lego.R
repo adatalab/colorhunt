@@ -25,14 +25,19 @@ color_lego <- function(series) {
     pull(color) %>%
     unique()
 
-  c <- paste0("c(", toString(color), "')") %>%
-    stringr::str_replace_all("#", "'#") %>%
-    stringr::str_replace_all(",", "',")
+  if(Sys.info()[1] == "Linux") {
+    return(colors)
+  } else {
+    c <- paste0("c(", toString(color), "')") %>%
+      stringr::str_replace_all("#", "'#") %>%
+      stringr::str_replace_all(",", "',")
 
-  clipr::write_clip(c, object_type = "character")
-  cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
+    clipr::write_clip(c, object_type = "character")
+    cat("Colors were copied to your clipboard! Paste (Ctrl + V) the color code into the script! \n")
 
-  return(color)
+    return(color)
+  }
+
 }
 
 
